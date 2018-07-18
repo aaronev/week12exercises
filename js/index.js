@@ -8,6 +8,16 @@ console.log(numList.map(el => Math.round(el)))
 
 // 6. Create a function that produces 10 random numbers between 1 and 100. Add each number to an array of numbers.
 
+function tenRandomNumberBetween1To100(){
+  var nums = []
+  for(i = 0; i < 10; i++) {
+    nums.push(Math.floor(Math.random()*100)+1)
+  }
+  return nums
+} 
+
+console.log(tenRandomNumberBetween1To100())
+
 // 7. Write out a function that creates a few variables which store the following information: one which stores the whole date, one for the current hour, one for the current minute, and one for the current second.
 
 // 8. Inside the function, create a variable that will display the current time in the hh:mm:ss format. Don't forget to account for single-digit numbers!
