@@ -21,11 +21,11 @@ console.log(tenRandomNumberBetween1To100())
 // 7. Write out a function that creates a few variables which store the following information: 
 //one which stores the whole date, one for the current hour, one for the current minute, and one for the current second.
 
-var storeDateAndTime = function() {
+function dateAndTime() {
   var today = new Date();
   var dd = today.getDate();
   var mm = today.getMonth()+1;
-  var yyyy = today.getFullYear();
+  var yyyy = today.getFullYear().toString()
   var time = today.getTime();
   var hr = today.getHours()
   var min = today.getMinutes()
@@ -52,10 +52,17 @@ var storeDateAndTime = function() {
   } 
 
   var date = mm+"/"+dd+"/"+yyyy
-  var time = hr+":"+min+":"+sec
-  return [date, time]
+
+  return [date, hr+":"+min+":"+sec]
 }
 
+function time() {
+  return dateAndTime()[1]
+}
+
+function counter() {
+  return setInterval(time(), 1000)
+}
 // 8. Inside the function, create a variable that will display the current time in the hh:mm:ss format. Don't forget to account for single-digit numbers!
 
 // 9. Inside the function, create a few more variables to store the current month, day, and year.
